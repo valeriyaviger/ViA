@@ -1,0 +1,12 @@
+setwd("D:/Журенков/Хранилища данных")
+mydata<-read.table(file = "Pakistan.txt", header = TRUE)
+attach (mydata)
+plot (Year,terrorism,xlab = "Год", ylab = "Терроризм",main = "Частота упоминаний характеристик для Пакистана", pch = 15, col = "red", type = "b", xlim = c(2000,2014), ylim = c(0,9000))
+lines (Year, terrorist, xlim = c(2000,2014), pch = 16, col = "green", type = "b")
+lines (Year, occupation, xlim = c(2000,2014), pch = 16, col = "orange", type = "b")
+lines (Year, narcotic, xlim = c(2000,2014), pch = 16, col = "black", type = "b")
+lines (Year, violation, xlim = c(2000,2014), pch = 16, col = "brown", type = "b")
+lines (Year, democracy, xlim = c(2000,2014), pch = 16, col = "yellow", type = "b")
+lines (Year, development, xlim = c(2000,2014), pch = 16, col = "blue", type = "b")
+legend ("topleft", inset = 0.01, title = "Характеристики", c("терроризм","террорист", "окупация", "наркотики", "насилие", "демократия", "развитие"),lty = c(1,1,1,1,1,1,1), pch = c(15,16,16,16,16,16,16),col = c("red","green","orange","black","brown","yellow","blue"))
+
